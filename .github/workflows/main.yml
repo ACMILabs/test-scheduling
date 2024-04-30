@@ -1,4 +1,4 @@
-name: Konstellations CI
+name: Main workflow
 
 on: [push, workflow_call]
 

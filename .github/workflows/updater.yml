@@ -1,11 +1,13 @@
-name: Update Konstellations data
+name: Test scheuler
 
 on:
   schedule:
     - cron: '*/5 * * * *'  # Every 5 minutes
 
 jobs:
-  build:
-    uses: ./.github/workflows/main.yml
+  trigger-deployment:
+    name: Trigger downstream workflow
+    uses: benc-uk/workflow-dispatch
     with:
+      workflow: main.yml
       ref: branch-to-schedule-on
