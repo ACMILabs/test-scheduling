@@ -9,5 +9,5 @@ jobs:
     name: Trigger downstream workflow
     uses: benc-uk/workflow-dispatch@v1
     with:
-      workflow: Main workflow
+      workflow: ./.github/workflows/main.yml
       ref: branch-to-schedule-on
