@@ -7,7 +7,7 @@ on:
 jobs:
   trigger-deployment:
     name: Trigger downstream workflow
-    uses: benc-uk/workflow-dispatch@1
+    uses: benc-uk/workflow-dispatch@v1
     with:
       workflow: main.yml
       ref: branch-to-schedule-on
