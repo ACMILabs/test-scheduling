@@ -6,8 +6,10 @@ on:
 
 jobs:
   trigger-deployment:
-    name: Trigger downstream workflow
-    uses: benc-uk/workflow-dispatch@v1
-    with:
-      workflow: ./.github/workflows/main.yml
-      ref: branch-to-schedule-on
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger downstream workflow
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: main.yml
+          ref: branch-to-schedule-on
