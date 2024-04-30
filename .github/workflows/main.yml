@@ -1,0 +1,17 @@
+name: Konstellations CI
+
+on: [push, workflow_call]
+
+jobs:
+  job-to-schedule:
+    name: This job will be run on push and when scheduled
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Print branch ref
+        run: echo ${{ github.ref }}

@@ -1,0 +1,11 @@
+name: Update Konstellations data
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Every 5 minutes
+
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    with:
+      ref: branch-to-schedule-on
